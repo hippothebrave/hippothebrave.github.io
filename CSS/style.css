@@ -1,8 +1,11 @@
+/*
 body{
     size: 16pt;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+*/
 
 h1{
     size:35pt;
+    font-family: cursive;
 }
