@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                margin: 0%;
+                background-color: #FFEBC2; /*#F5D9B8; /*#FFF1D6; /* #FFF8EB; /* 8#ffe58f; /*#ffdd6e; /*#F0F3BD;*/
+            }
+            .sidenav{
+                height: 100%;
+                width: 225px;
+                top: 0;
+                position: fixed;
+                background-color: #3BCEAC; /* #02C39A; /*#FFBE0B; /* #C2EABD;*/
+                visibility: hidden;
+                transition: 0.4s;
+                color: #390099;
+            }
+            #close{
+                margin-left: 175px;
+                height: 50px;
+                width: 50px;
+                background-color: #0EAD69; /* #00A896; /*#FB5607; /* #C2EABD;*/
+                font-size: 38px;
+                border-radius: 5px;
+            }
+            .sidenav button{
+                display: block;
+                border: none;
+                background-color: transparent; /*#3BCEAC; /*#FFBE0B; /*#C2EABD;*/
+                font-size: 10px;
+                height: 6%;
+                width: 100%;
+                /* padding: 10px 10px 10px 10px; */
+                color: #390099;
+            }
+            .out{
+                width: 225px; 
+                height: 100%; 
+                margin-left: 225px;
+                float: left; 
+                top: 0;
+                background-color: yellowgreen; 
+                overflow: hidden;
+                z-index: 1;
+                /* position: relative; */
+                position: fixed;
+            }
+            .blueout{
+                width: 225px; 
+                height: 100%; 
+                margin-left: 450px;
+                float: left; 
+                top: 0;
+                background-color: royalblue; 
+                overflow: hidden;
+                z-index: 1;
+                /* position: relative; */
+                position: fixed;
+            }
+            .main{
+                height: 100%;
+                width: 100%;
+                margin-left: 0px;
+                padding: 0%;
+                margin-top: 0%;
+                transition: 0.5s;
+            }
+            #title{
+                font-size: 45px;
+                margin-top: 15px;
+                margin-bottom: 15px;
+            }
+            #open{
+                width: 50px;
+                height: 45px;
+                background-color: #8338EC; /*#05668D; /* #DA344D; /*EC5766;*/
+                border-style: none;
+                font-size: 30px;
+                color: white;
+                transition: 0.2s;
+                border-radius: 5px;
+                position: fixed;
+            }
+            .head{
+                width: 100%;
+                height: 130px;
+                color: white;
+                position: fixed;
+                top: 0;
+                background-color: #eb4569;  /*  #e94064; #EC325A; /*#EF7674;/*#EC325A; /*#fa446c; /*#EE4266; /* #028090; /* #FF006E; /* #EC5766; /*EF7674;*/
+            }
+            #firstinput{
+                width: 350px;
+                height: 25px;
+                border-radius: 20px;
+                border-style: none;
+            }
+            .movies{
+                margin: 10px;
+                margin-left: 65px;
+            }
+            #popular{
+                display: inline;
+                font-size: 20px;
+                font-weight: bold;
+                color: #8338EC; /*#390099; /*#05668D;*/
+            }
+            #mov{
+                margin: 10px;
+                display: inline-block;
+            }
+            .pop{
+                font-size: 18px;
+                padding: 5px;
+                border-style: none;
+                border-radius: 5px;
+                color: white;
+            }
+            .moviess{
+                /* background: url(bakeoff.png); */
+                display: none;
+                transition: opacity 2s ease-out;
+                opacity: 1; 
+                display: inline;
+                height: 150px;
+                width: 120px;
+                margin-left: 40px;
+                margin-right: 40px;
+                border-style: none;
+            }
+            .label{
+                /* display: none; */
+                width: 120px;
+                height: 20px;
+                margin-left: 40px;
+                margin-right: 40px;
+                background-color: transparent;
+                border-style: none;
+                font-size: 15px;
+                /* font-weight: bold; */
+                color: #8338EC; /*#390099; /*#05668D;*/
+            }
+            .directions{
+                height: 150px;
+                width: 30px;
+                display: inline;
+                background-color: transparent;
+                color:  #8338EC; /* #05668D; /*#3A86FF;*/
+                border-style: none;
+                font-size: 48px;
+                font-weight: bold;
+                padding-bottom: 20px; 
+            }
+            .checkbox{
+                border-radius: 5px;
+                border-style: solid;
+                margin: 8px;
+                padding-bottom: 10px;
+            }
+            .edit{
+                width: 30px; 
+                height: 25px; 
+                padding: 5px;
+                border-style: none;
+            }
+            .love{
+                width: 30px; 
+                height: 25px; 
+                padding: 5px;
+                border-style: none;
+                background: url(heart1.png);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+            .smallmov{
+                display: inline;
+            }
+            .smallmovie{
+                margin: 5px;
+                height: 70px;
+                width: 55px;
+                border-style: none;
+                /* background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain; */
+            }
+            #movies1{
+                margin-top: 160px;
+            }
+            .tags{
+                /* display: block; */
+                margin: 30px;
+            }
+            #mod{
+                height: 580px;
+                width: 1250px;
+                margin-top: 15px;
+                margin-left: 15px;
+                background: #FFEBC2;
+            }
+            .mod1{
+                display: block;
+                /* float: left; */
+            }
+            .add2{
+                margin-right: 20px;
+                background: url(add2.PNG);
+                width: 30px; 
+                height: 25px; 
+                padding: 5px;
+                border-style: none;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+        </style>
+        <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type = "text/javascript" src = "finalui.js"></script>
+    </head>
+    
+    <body>
+        <div class = "sidenav" id="sidenav">
+            <button id="close" style="text-align: center;">&times;</button>
+            <button id="custom"></button>
+            <h4 style = "text-align: center; margin-top: 15px; margin-bottom: 20px;">Customize Filter</h4>
+            <button id="preset"></button>
+            <h4 style = "text-align: center; margin-top: 15px; margin-bottom: 20px;">Row Library</h4>
+            <button id="collect"></button>
+            <h4 style = "text-align: center; margin-top: 15px; margin-bottom: 20px;">Collections</h4>
+            <button id="friends"></button>
+            <h4 style = "text-align: center; margin-top: 15px; margin-bottom: 20px;">Find Friends</h4>
+            <button id="share"></button>
+            <h4 style = "text-align: center; margin-top: 15px; margin-bottom: 20px;">Share</h4>
+            <button id="settings"></button>
+            <h4 style = "text-align: center; margin-top: 15px; margin-bottom: 20px;">Settings</h4>
+        </div>
+        <div class="out" id="side">
+            <div id = "customside">
+                <h2 style="text-align: center;">Add Custom Row</h2>
+                <div class = "checkbox">
+                    <h3 style="text-align: center; margin-top: 8px; margin-bottom: 5px;">Genre</h3>
+                    <div>
+                        <input type = "checkbox" id = "cb1">
+                        <label for="cb1">Action&nbsp;&nbsp;</label>
+                        <input type = "checkbox" id = "cb2">
+                        <label for="cb2">Comedy</label>
+                    </div>
+                    <div>
+                        <input type = "checkbox" id = "cb3">
+                        <label for="cb3">Drama&nbsp;&nbsp;</label>
+                        <input type = "checkbox" id = "cb4">
+                        <label for="cb4">Horror</label>
+                    </div>
+                    <div>
+                        <input type = "checkbox" id = "cb5">
+                        <label for="cb5">Thriller&nbsp;</label>
+                        <input type = "checkbox" id = "cb6">
+                        <label for="cb6">Sci-Fi</label>
+                    </div>
+                    <div>
+                        <input type = "checkbox" id = "cb7">
+                        <label for="cb7">Mystery</label>
+                        <input type = "checkbox" id = "cb8">
+                        <label for="cb8">Fantasy</label>
+                    </div>
+                    <div>
+                        <input type = "checkbox" id = "cb9">
+                        <label for="cb9">Crime&nbsp;&nbsp;&nbsp;</label>
+                        <input type = "checkbox" id = "cb10">
+                        <label for="cb10">Romance</label>
+                    </div>
+                </div>
+                <div class = "checkbox">
+                    <h3 style="text-align: center; margin-top: 8px; margin-bottom: 5px;">Style / Mood</h3>
+                    <div>
+                        <input type = "checkbox" id = "cb11">
+                    <label for="cb11">Feel - Good</label>
+                        <input type = "checkbox" id = "cb12">
+                        <label for="cb12">Serious</label>
+                    </div>
+                    <div>
+                        <input type = "checkbox" id = "cb13">
+                        <label for="cb13">Melancholy</label>
+                        <input type = "checkbox" id = "cb14">
+                        <label for="cb14">Intense</label>
+                    </div>
+                    <div>
+                        <input type = "checkbox" id = "cb15">
+                        <label for="cb15">Thoughtful&nbsp;</label>
+                        <input type = "checkbox" id = "cb16">
+                        <label for="cb16">Upbeat</label>
+                    </div>
+                    <div>
+                        <input type = "checkbox" id = "cb17">
+                        <label for="cb17">Mindless&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                        <input type = "checkbox" id = "cb18">
+                        <label for="cb18">Goofy</label>
+                    </div>
+                    <div>
+                        <input type = "checkbox" id = "cb19">
+                        <label for="cb19">Thrilling&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                        <input type = "checkbox" id = "cb20">
+                        <label for="cb20">Scary</label>
+                    </div>
+                </div>
+                <div style="margin: 10px;">
+                    <h3 style="margin-bottom: 5px; margin-top: 5px;">Actor</h3>
+                    <input style="width: 90%; height: 23px; border-radius: 10px; border-style: none;" type="text">
+                </div>
+                <div style="margin: 10px;">
+                    <h3 style="margin-bottom: 5px; margin-top: 5px;">Writer</h3>
+                    <input style="width: 90%; height: 23px; border-radius: 10px; border-style: none;" type="text">
+                </div>
+                <div style="margin: 10px;">
+                    <h3 style="margin-bottom: 5px; margin-top: 5px;">Other Creator</h3>
+                    <input style="width: 90%; height: 23px; border-radius: 10px; border-style: none;" type="text">
+                </div>
+            </div>
+            <div id = "presetside">
+                <div>
+                    <button style="margin:0; display: inline; border-style: none; background: rgb(124, 185, 2); height: 40px; width: 50%; font-size: 16px;">Preset Rows</button>
+                    <button style="margin:0; display: inline; border-style: none; border-radius: 10px; background: transparent; height: 40px; font-size: 16px;">Saved Rows</button>
+                </div>
+                <h2 style="text-align: center; margin-top: 5px; margin-bottom: 15px;">Add Preset Row</h2>
+                <center>
+                    <div>
+                        <button class ="pop" style="background-color:magenta;">Essential 80's</button>
+                        <button id ="add1" class = "edit"></button>
+                    </div>
+                    <h4 style="margin-top: 5px; margin-bottom: 5px;">Popular movies from the 80's</h4>
+                    <div class = "smallmov">
+                        <button class ="smallmovie" id="scarface"></button>
+                        <button class ="smallmovie" id="teen"></button>
+                        <button class ="smallmovie" id="pred"></button>
+                    </div>
+                    <div class="smallmov">
+                        <label style="text-align: center; width: 33%;">Scarface</label>
+                        <label style="text-align: center; width: 33%;">Teen Wolf</label>
+                        <label style="text-align: center; width: 33%;">Predator</label>
+                    </div>
+                    <div>
+                        <button class ="pop" style="background-color:turquoise; margin-top: 10px;">Mysteries</button>
+                        <button id ="add2" class = "edit"></button>
+                    </div>
+                    <h4 style="margin-top: 5px; margin-bottom: 5px;">Works considered mysteries</h4>
+                    <div class = "smallmov">
+                        <button class ="smallmovie" id="reb"></button>
+                        <button class ="smallmovie" id="divi"></button>
+                        <button class ="smallmovie" id="cast"></button>
+                    </div>
+                    <div class="smallmov">
+                        <label>Rebecca</label>
+                        <label>Da Vinci Code</label>
+                        <label>Castle</label>
+                    </div>
+                    <div>
+                        <button class ="pop" style="background-color: royalblue; margin-top: 10px;">Horror Lovers</button>
+                        <button id ="add3" class = "edit"></button>
+                    </div>
+                    <h4 style="margin-top: 5px; margin-bottom: 5px;">Spine-chilling horror films</h4>
+                    <div class = "smallmov">
+                        <button class ="smallmovie" id="candy"></button>
+                        <button class ="smallmovie" id="hallow"></button>
+                        <button class ="smallmovie" id="mali"></button>
+                    </div>
+                    <div class="smallmov">
+                        <label>Candyman</label>
+                        <label>Halloween</label>
+                        <label>Malignant</label>
+                    </div>
+                </center>
+
+            </div>
+        </div>
+        <div class = "blueout" id="blueside">
+            <h2 style ="text-align: center; color: white;">Your Criteria</h2>
+            <div>
+                <center>
+                    <div class="tags">
+                        <button id= "tag2" class ="pop" style="background-color: palevioletred;">Comedy</button>
+                    </div>
+                    <div class="tags">
+                        <button id= "tag1" class ="pop" style="background-color: rgb(96, 201, 236);">Mystery</button>
+                    </div>    
+                    <div class="tags">
+                        <button id= "tag3" class ="pop" style="background-color: rgb(216, 143, 216); ">Upbeat</button>
+                    </div>
+                </center>
+            </div>
+            
+            <div style="margin: 50px; align-items: center; position: absolute; bottom: 0;">
+                <button id="save" style="border-style: none; width: 120px; height: 30px; border-radius: 7px;">Add Row</button>
+            </div>
+        </div>
+        <div class = "main" id = "main">
+            <div class = "head">
+                <button id="open">&#9776;</button>
+                <center>
+                    <h1 id = "title">Media Map</h1>
+                    <form>
+                        <input type = "text" placeholder = " Search" id ="firstinput">
+                        <button style = "background-color:#8338EC; /*#05668D;*/ border-style: none; color: white; padding: 5px; border-radius: 5px;" type = "submit">Submit</button>
+                    </form>
+                </center>
+            </div>
+            <div class = "movies" id="movies1">
+                <div id="popular">
+                    These titles are ...
+                    <button class ="pop" style="background-color: violet;">Popular</button>
+                    <button id ="edit1" class = "edit"></button>
+                    <button id ="love1" class = "love"></button>
+                </div>
+                <div id="mov">
+                    <center>
+                        <button class="directions" id="back"></button>
+                        <button class="moviess" id="1"></button>
+                        <button class="moviess" id="2"></button>
+                        <button class="moviess" id="3"></button>
+                        <button class="moviess" id="4"></button>
+                        <button class="moviess" id="5"></button>
+                        <button class="moviess" id="6"></button>
+                        <button class="moviess" id="7"></button>
+                        <button class="moviess" id="8"></button>
+                        <button class="moviess" id="9"></button>
+                        <button class="moviess" id="10"></button>
+                        <button class="directions" id="foward"></button>
+                    </center>
+                    <center>
+                        <button class="label" id="1l">British Bake Off</button>
+                        <button class="label" id="2l">The Avengers End Game</button>
+                        <button class="label" id="3l">Harry Potter</button>
+                        <button class="label" id="4l">Law & Order</button>
+                        <button class="label" id="5l">Mean Girls</button>
+                        <button class="label" id="6l">The Office</button>
+                        <button class="label" id="7l">Real Housewives</button>
+                        <button class="label" id="8l">Shrek</button>
+                        <button class="label" id="9l">Star Trek</button>
+                        <button class="label" id="10l">Survivor</button>
+                    </center>
+                </div>
+            </div>
+            <div class = "movies" id = "movies2">
+                <div id="popular">
+                    These titles are ...
+                    <button class="pop" style="background-color: turquoise;">Mysteries</button>
+                    <button id ="edit2" class="edit"></button>
+                    <button id ="love2" class = "love"></button>
+                    <!-- <button style="background-color: #8338EC; /*#05668D;*/ border-style: none; color: white; padding: 5px; border-radius: 5px;"></button>  -->
+                </div>
+                <div id="mov">
+                    <center>
+                        <button class="directions" id="back2"></button>
+                        <button class="moviess" id="m1"></button>
+                        <button class="moviess" id="m2"></button>
+                        <button class="moviess" id="m3"></button>
+                        <button class="moviess" id="m4"></button>
+                        <button class="moviess" id="m5"></button>
+                        <button class="directions" id="foward2"></button>
+                    </center>
+                    <center>
+                        <button class="label" id="m1l">Rebecca</button>
+                        <button class="label" id="m2l">The Da Vinci Code</button>
+                        <button class="label" id="m3l">Castle</button>
+                        <button class="label" id="m4l">Knives Out</button>
+                        <button class="label" id="m5l">Midsomer Murders</button>
+                    </center>
+                </div>
+            </div>
+            <div class = "movies" id = "movies3">
+                <div id="popular">
+                    These titles are ...
+                    <button id= "tag2" class ="pop" style="background-color: palevioletred;">Comedy</button>
+                    <button id= "tag1" class ="pop" style="background-color: rgb(96, 201, 236);">Mystery</button>
+                    <button id= "tag3" class ="pop" style="background-color: rgb(216, 143, 216); ">Upbeat</button>
+                    <button id ="edit3" class="edit"></button>
+                    <button id ="love3" class = "love"></button>
+                </div>
+                <div id="mov">
+                    <center>
+                        <button class="directions" id="back3"></button>
+                        <button class="moviess" id="y1"></button>
+                        <button class="moviess" id="y2"></button>
+                        <button class="moviess" id="y3"></button>
+                        <button class="moviess" id="y4"></button>
+                        <button class="moviess" id="y5"></button>
+                        <button class="directions" id="foward3"></button>
+                    </center>
+                    <center>
+                        <button class="label" id="1l">Clue</button>
+                        <button class="label" id="2l">Who Framed Roger Rabbit</button>
+                        <button class="label" id="3l">Knives Out</button>
+                        <button class="label" id="4l">Detective Pikachu</button>
+                        <button class="label" id="5l">iZombie</button>
+                    </center>
+                </div>
+            </div>
+        </div>
+        <div id = "model">
+                <div id="mod">
+                    <button id = "x" style="float: right;">X</button>
+                    <div class = "mod1">
+                        <div style="display: inline-block; height:200px; width: 200px; margin-top: 25px; margin-left: 50px;">
+                            <button style="border-style: none; height: 200px; width: 180px; margin: 0; margin-left: 15px;" id ="modimg"></button>
+                            <center>
+                                <button style="height: 50px; width: 50px; border-style: none;" id="star"></button>
+                                <div style="display: inline-block;">
+                                    <h1 style="margin: 0;">7.3 / 10</h1>
+                                    <h5 style="margin: 0;">(Source IMDB)</h5>
+                                </div>    
+                            </center>
+                        </div>
+                        <div style="display: inline-block; height: 200px; width: 450px; margin-left: 20px;">
+                            <h1 style="margin-top: 0; margin-bottom: 10px;">Clue: The Movie</h1>
+                            <p style="font-size: 18px; margin-top: 0;"> 
+                                Six blackmail victims are invited to an isolated 
+                                mansion by a man who knows a dark secret from each 
+                                of their pasts. On arrival, each is given a pseudonym 
+                                drawn from Cluedo before being introduced to the 
+                                blackmailer. Each is handed a weapon, at which point 
+                                the lights are switched off and the blackmailer is 
+                                killed. Can the guests uncover the murderer before 
+                                they all become victims?
+                            </p>
+                        </div>
+                        <div style="display: inline-block; margin-top: 30px; margin-left: 15px;">
+                            <div style="height: 200px; width: 400px; border: solid; border-radius: 10px; margin-top: 0; margin-left: 30px;">
+                                <h2 style="margin-left: 20px; margin-bottom: 0;">Avaliable On...</h2>
+                                <div style="margin-left: 20px;">
+                                    <button id= "tag1" class ="pop" style="background-color: rgb(112, 111, 111); margin: 10px; ">Paramount</button>
+                                    <button id= "tag1" class ="pop" style="background-color: rgb(112, 111, 111); margin: 10px;">Vudu ($)</button>
+                                    <button id= "tag1" class ="pop" style="background-color: rgb(112, 111, 111); margin: 10px;">Microsoft ($)</button>
+                                    <button id= "tag1" class ="pop" style="background-color: rgb(112, 111, 111); margin: 10px;">Pluto (ads)</button>
+                                    <button id= "tag1" class ="pop" style="background-color: rgb(112, 111, 111); margin: 10px;">iTunes ($)</button>
+                                    <button id= "tag1" class ="pop" style="background-color: rgb(112, 111, 111); margin: 10px;">Google Play ($)</button>
+                                </div>
+                            </div>
+                            <center>
+                                <p style="margin-top: 5px; text-align: center; color: gray; width: 300px; margin-left: 10px;">
+                                    Click a criterion to add it to your current custom row. 
+                                    Click again to deselect.
+                                </p>
+                            </center>
+                        </div>
+                        <div style="margin-left: 50px; margin-top: 20px; font-size: 28px; font-weight: normal;">
+                            Genre: 
+                            <button id= "tag1" class ="pop" style="background-color: rgb(96, 201, 236); margin: 10px; margin-right: 0;">Mystery</button>
+                            <button class="add2"></button>
+                            <button id= "tag1" class ="pop" style="background-color: rgb(110, 96, 236); margin: 10px; margin-right: 0;">Comedy</button>
+                            <button class="add2"></button>
+                            <button id= "tag1" class ="pop" style="background-color: rgb(173, 96, 236); margin: 10px; margin-right: 0;">Crime</button>
+                            <button class="add2"></button>
+                        </div>
+                        <div style="margin-left: 50px; margin-top: 10px; font-size: 28px; font-weight: normal;">
+                            Style: 
+                            <button id= "tag1" class ="pop" style="background-color: rgb(164, 236, 96); margin: 10px; margin-right: 0;">Upbeat</button>
+                            <button class="add2"></button>
+                            <button id= "tag1" class ="pop" style="background-color: rgb(96, 236, 201); margin: 10px; margin-right: 0;">Fast-paced</button>
+                            <button class="add2"></button>
+                        </div>
+                        <div style="margin-left: 50px; margin-top: 10px; font-size: 28px; font-weight: normal;">
+                            Actors: 
+                            <button id= "tag1" class ="pop" style="background-color: rgb(236, 187, 96); margin: 10px; margin-right: 0;">Tim Curry</button>
+                            <button class="add2"></button>
+                            <button id= "tag1" class ="pop" style="background-color: rgb(236, 222, 96); margin: 10px; margin-right: 0;">Madeline Kahn</button>
+                            <button class="add2"></button>
+                            <button id= "tag1" class ="pop" style="background-color: rgb(236, 96, 194); margin: 10px; margin-right: 0;">Christopher Lloyd</button>
+                            <button class="add2"></button>
+                            <button id= "tag1" class ="pop" style="background-color: rgb(96, 161, 236); margin: 10px; margin-right: 0;">Eileen Brennan</button>
+                            <button class="add2"></button>
+                        </div>
+                        <div style="margin-left: 50px; margin-top: 10px; font-size: 28px; font-weight: normal;">
+                            Writers: 
+                            <button id= "tag1" class ="pop" style="background-color: rgb(236, 96, 150); margin: 10px; margin-right: 0;">John Landis</button>
+                            <button class="add2"></button>
+                            <button id= "tag1" class ="pop" style="background-color: rgb(236, 129, 96); margin: 10px; margin-right: 0;">Jonathan Lynn</button>
+                            <button class="add2"></button>
+                            <button id= "tag1" class ="pop" style="background-color: rgb(236, 96, 96); margin: 10px; margin-right: 0;">Anthony E. Pratt (source material)</button>
+                            <button class="add2"></button>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </body>    
+</html>

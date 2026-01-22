@@ -1,0 +1,213 @@
+body{
+    margin: 0%;
+    background-color: #FFEBC2; /*#F5D9B8; /*#FFF1D6; /* #FFF8EB; /* 8#ffe58f; /*#ffdd6e; /*#F0F3BD;*/
+}
+.sidenav{
+    height: 100%;
+    width: 225px;
+    top: 0;
+    position: fixed;
+    background-color: #3BCEAC; /* #02C39A; /*#FFBE0B; /* #C2EABD;*/
+    visibility: hidden;
+    transition: 0.4s;
+    color: #390099;
+}
+#close{
+    margin-left: 175px;
+    height: 50px;
+    width: 50px;
+    background-color: #0EAD69; /* #00A896; /*#FB5607; /* #C2EABD;*/
+    font-size: 38px;
+    border-radius: 5px;
+}
+.sidenav button{
+    display: block;
+    border: none;
+    background-color: transparent; /*#3BCEAC; /*#FFBE0B; /*#C2EABD;*/
+    font-size: 10px;
+    height: 6%;
+    width: 100%;
+    /* padding: 10px 10px 10px 10px; */
+    color: #390099;
+}
+.out{
+    width: 225px; 
+    height: 100%; 
+    margin-left: 225px;
+    float: left; 
+    top: 0;
+    background-color: yellowgreen; 
+    overflow: hidden;
+    z-index: 1;
+    /* position: relative; */
+    position: fixed;
+}
+.blueout{
+    width: 225px; 
+    height: 100%; 
+    margin-left: 450px;
+    float: left; 
+    top: 0;
+    background-color: royalblue; 
+    overflow: hidden;
+    z-index: 1;
+    /* position: relative; */
+    position: fixed;
+}
+.main{
+    height: 100%;
+    width: 100%;
+    margin-left: 0px;
+    padding: 0%;
+    margin-top: 0%;
+    transition: 0.5s;
+}
+#title{
+    font-size: 45px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+#open{
+    width: 50px;
+    height: 45px;
+    background-color: #8338EC; /*#05668D; /* #DA344D; /*EC5766;*/
+    border-style: none;
+    font-size: 30px;
+    color: white;
+    transition: 0.2s;
+    border-radius: 5px;
+    position: fixed;
+}
+.head{
+    width: 100%;
+    height: 130px;
+    color: white;
+    position: fixed;
+    top: 0;
+    background-color: #eb4569;  /*  #e94064; #EC325A; /*#EF7674;/*#EC325A; /*#fa446c; /*#EE4266; /* #028090; /* #FF006E; /* #EC5766; /*EF7674;*/
+}
+#firstinput{
+    width: 350px;
+    height: 25px;
+    border-radius: 20px;
+    border-style: none;
+}
+.movies{
+    margin: 10px;
+    margin-left: 65px;
+}
+#popular{
+    display: inline;
+    font-size: 20px;
+    font-weight: bold;
+    color: #8338EC; /*#390099; /*#05668D;*/
+}
+#mov{
+    margin: 10px;
+    display: inline-block;
+}
+.pop{
+    font-size: 18px;
+    padding: 5px;
+    border-style: none;
+    border-radius: 5px;
+    color: white;
+}
+.moviess{
+    /* background: url(images/images/bakeoff.png); */
+    display: none;
+    transition: opacity 2s ease-out;
+    opacity: 1; 
+    display: inline;
+    height: 150px;
+    width: 120px;
+    margin-left: 40px;
+    margin-right: 40px;
+    border-style: none;
+}
+.label{
+    /* display: none; */
+    width: 120px;
+    height: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+    background-color: transparent;
+    border-style: none;
+    font-size: 15px;
+    /* font-weight: bold; */
+    color: #8338EC; /*#390099; /*#05668D;*/
+}
+.directions{
+    height: 150px;
+    width: 30px;
+    display: inline;
+    background-color: transparent;
+    color:  #8338EC; /* #05668D; /*#3A86FF;*/
+    border-style: none;
+    font-size: 48px;
+    font-weight: bold;
+    padding-bottom: 20px; 
+}
+.checkbox{
+    border-radius: 5px;
+    border-style: solid;
+    margin: 8px;
+    padding-bottom: 10px;
+}
+.edit{
+    width: 30px; 
+    height: 25px; 
+    padding: 5px;
+    border-style: none;
+}
+.love{
+    width: 30px; 
+    height: 25px; 
+    padding: 5px;
+    border-style: none;
+    background: url(images/heart1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.smallmov{
+    display: inline;
+}
+.smallmovie{
+    margin: 5px;
+    height: 70px;
+    width: 55px;
+    border-style: none;
+    /* background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain; */
+}
+#movies1{
+    margin-top: 160px;
+}
+.tags{
+    /* display: block; */
+    margin: 30px;
+}
+#mod{
+    height: 580px;
+    width: 1250px;
+    margin-top: 15px;
+    margin-left: 15px;
+    background: #FFEBC2;
+}
+.mod1{
+    display: block;
+    /* float: left; */
+}
+.add2{
+    margin-right: 20px;
+    background: url(images/add2.PNG);
+    width: 30px; 
+    height: 25px; 
+    padding: 5px;
+    border-style: none;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}

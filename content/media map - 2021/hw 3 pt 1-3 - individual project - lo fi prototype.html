@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Monopoly Card</title>
+
+	<style type="text/css">
+
+		body{
+
+			background-color: lightblue;
+
+			font-family: Futura, Trebuchet MS, Arial, sans-serif;
+
+			/*font-family: monospace;  we can import fonts and suchlike */
+
+			color: #212121;
+
+		}
+
+		p{
+
+			margin: 0px;
+
+			padding: 0px;
+
+		}
+
+		div{
+
+			margin: 0px;
+
+			padding: 0px;
+
+		}
+
+		/*classes*/
+
+		.container{
+
+			/*margin: 0px auto;*/
+
+		}
+
+		.textbox{
+
+			font-size: 20px;
+
+			margin: 0px;
+
+			/*margin: 10px 0px 0px 0px;*/
+
+		}
+
+		.yellowtext{
+
+			margin: 0px;
+
+			padding: 0px;
+
+			font-family: Copperplate, Copperplate Gothic Light, fantasy;
+
+		}
+
+		.centeredtext{
+
+			text-align: center;
+
+		}
+
+		.clear{
+
+			clear: both;
+
+		}
+
+		/*ids*/
+
+		#outer_card{
+
+			/*let inner_card be centered*/
+
+			display: flex;
+
+			align-items: center;
+
+			/*outer_card properties*/
+
+			background-color: white;
+
+			width: 400px;
+
+			height: 460px;
+
+			margin: auto;
+
+		}
+
+		#inner_card{
+
+			box-sizing: border-box;
+
+			border: solid #333 3px;
+
+			margin: 10px 13px 25px auto; /*MADE RIGHT MARGIN SMALLER*/
+
+			padding: 10px 12px 13px 12px;
+
+			width: 370px;
+
+			height: 425px;
+
+		}
+
+
+		#yellow_box{
+
+			box-sizing: border-box;
+
+			border: solid #333 3px;
+
+			background-color: rgba(248,242,24,255);
+
+			width: 330px;
+
+			height: 68px;
+
+			padding: 10px 30px 15px 30px;
+
+		}
+
+		#classification{
+
+			font-size: 15px;
+
+			letter-spacing: 5px;
+
+			font-weight: bold;
+
+			padding: 0px 0px 2px 0px;
+
+		}
+
+		#name{
+
+			font-size: 22px;
+
+			letter-spacing: 2px;
+
+			font-weight: 1000;
+
+		}
+
+
+		#top_text{
+
+			margin-top: 10px;
+
+		}
+
+
+		#two_col_text{
+
+			display: flex;
+
+			justify-content: center;
+
+		}
+
+		#left_col{
+
+			float: left;
+
+			margin-right: 25px;
+
+		}
+
+		#right_col{
+
+			float: right;
+
+			text-align: right;
+
+			margin-left: 25px;
+
+		}
+
+		#two_col_text p{
+
+			margin-top: 5px;
+
+			word-spacing: 2px;
+
+			/*letter-spacing: 1px;*/
+
+		}
+
+
+		#main_text{
+
+			margin-bottom: 15px;
+
+		}
+
+		#main_text p{
+
+			margin-top: 5px;
+
+		}
+
+
+		#footer{
+
+			font-size: 12px;
+
+			width: 300px;
+
+			margin: auto;
+
+			word-wrap: break-word;
+
+		}
+
+
+	</style>
+
+</head>
+
+<body>
+
+	<div id="outer_card" class="container">
+
+		<div id="inner_card" class="container">
+
+
+			<div id="yellow_box">
+
+				<div class="yellowtext centeredtext" id="classification">
+
+					TITLE DEED
+
+				</div>
+
+				<div class="yellowtext centeredtext" id="name">
+
+					MARVIN GARDENS
+
+				</div>
+
+			</div>
+
+
+			<div id="top_text" class="textbox centeredtext">
+
+				<p>RENT $24.</p>
+
+			</div>
+
+
+			<div id="two_col_text">
+
+				<div id="left_col" class="textbox">
+
+					<p>With 1 House</p>
+
+					<p>With 2 Houses</p>
+
+					<p>With 3 Houses</p>
+
+					<p>With 4 Houses</p>
+
+				</div>
+
+				<div id="right_col" class="textbox">
+
+					<p>$ 120.</p>
+
+					<p>  320.</p>
+
+					<p>  850.</p>
+
+					<p> 1025.</p>
+
+				</div>
+
+				<div class="clear"></div>
+
+			</div>
+
+
+			<div id="main_text" class="textbox centeredtext">
+
+				<p>With HOTEL $1200.</p>
+
+				<p>Mortgage Value $140.</p>
+
+				<p>Houses cost $150. each</p>
+
+				<p>Hotels, $150. plus 4 houses</p>
+
+			</div>
+
+
+			<div id="footer">
+
+				<p>If a player owns ALL the Lots of any Color-Group, the rent is Doubled on Unimproved Lots in that group.</p>
+
+				<p class="centeredtext">&copy;1935 Hasbro, Inc. </p>
+
+			</div>
+
+
+		</div>
+
+	</div>
+
+</body>
+
+</html>
