@@ -6,6 +6,33 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+/* BEGIN MEDIAMAP SECTION */
+.image-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* two equal columns */
+  gap: 10px;
+}
+
+.image-container img {
+  width: 100%; /* each takes half the width */
+  height: auto;
+  object-fit: contain;
+}
+
+.unpadded {
+  margin: 0;
+}
+
+.scroll-container {
+  height: 600px;
+  width: 100%;
+  overflow: auto;
+}
+/* END MEDIAMAP SECTION */
+
+
+/* BEGIN RESUME SECTION */
+
 .fa-bounce:hover{
   animation: fa-bounce 0.6s ease;
 }
@@ -209,6 +236,10 @@
   font-size: 150%;
 }
 
+
+
+/* END RESUME SECTION */
+
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -332,7 +363,7 @@ em, i {
   font-style: italic; }
 
 p {
-  margin: 0 0 2em 0; }
+  margin: 0 0 1em 0; }
 
 h1, h2, h3, h4, h5, h6 {
   color: #3d4449;
